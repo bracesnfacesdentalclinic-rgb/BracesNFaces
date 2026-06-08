@@ -164,11 +164,4 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // Detect mobile for CTA button href
-  const bookBtn = document.querySelector('.btn-book');
-  if (bookBtn) {
-    if (window.innerWidth < 768) {
-      bookBtn.href = 'tel:07795833211';
-    }
-  }
 });
