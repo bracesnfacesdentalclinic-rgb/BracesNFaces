@@ -72,12 +72,20 @@ img {
   text-align: center;
   position: relative;
   z-index: 100;
-}
-
-.announcement-bar p {
   font-size: 12px;
   color: var(--gray-mid);
   letter-spacing: 0.02em;
+}
+
+.announcement-bar a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.ann-sep {
+  opacity: 0.4;
+  margin: 0 0.3rem;
 }
 
 /* Navbar */
@@ -116,7 +124,7 @@ img {
 
 .navbar .logo-main,
 .navbar .logo-sub {
-  color: var(--white);
+  color: #000000;
 }
 
 .logo-sub {
@@ -142,12 +150,12 @@ img {
 }
 
 .navbar .nav-links a {
-  color: var(--white);
+  color: #000000;
 }
 
 .navbar .nav-links a:hover,
 .navbar .nav-links a.active {
-  color: rgba(255, 255, 255, 0.85);
+  color: #000000;
 }
 
 .nav-links a:hover,
@@ -167,7 +175,7 @@ img {
 }
 
 .navbar .nav-links a::after {
-  background-color: var(--white);
+  background-color: #000000;
 }
 
 .nav-links a:hover::after,
@@ -231,12 +239,12 @@ img {
 
 .navbar .nav-cta.btn-primary {
   background-color: var(--white);
-  color: var(--text-dark);
+  color: #000000;
 }
 
 .navbar .nav-cta.btn-primary:hover {
   background-color: var(--cream);
-  color: var(--text-dark);
+  color: #000000;
 }
 
 .hamburger {
@@ -256,7 +264,7 @@ img {
 }
 
 .navbar .hamburger span {
-  background-color: var(--white);
+  background-color: #000000;
 }
 
 /* Mobile Menu */
@@ -358,7 +366,7 @@ img {
   width: 105%;
   height: 105%;
   object-fit: cover;
-  object-position: center;
+  object-position: center 40%;
   transform: scale(1.08) translateX(2%);
   animation: heroBgKenBurns 16s ease-out forwards;
 }
@@ -372,10 +380,10 @@ img {
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    135deg,
-    rgba(10, 12, 8, 0.82) 0%,
-    rgba(10, 12, 8, 0.60) 50%,
-    rgba(10, 12, 8, 0.40) 100%
+    160deg,
+    rgba(10, 12, 8, 0.72) 0%,
+    rgba(10, 12, 8, 0.50) 50%,
+    rgba(10, 12, 8, 0.65) 100%
   );
   z-index: 1;
 }
@@ -408,7 +416,7 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.4rem;
+  gap: 1.1rem;
   padding: 0 1.5rem;
   max-width: 820px;
   width: 100%;
@@ -441,36 +449,48 @@ img {
   z-index: 1;
 }
 
-.hero-badge {
-  display: inline-flex;
+/* ── Clinic name block ── */
+.hero-clinic-name {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
-  background: rgba(157, 161, 124, 0.15);
-  border: 1px solid rgba(157, 161, 124, 0.6);
-  color: #e8eccc;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  padding: 0.45rem 1.1rem;
-  border-radius: 100px;
-  text-transform: uppercase;
+  gap: 0.3rem;
   opacity: 0;
-  animation: fadeUp 0.6s ease forwards 0.3s;
+  animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.2s;
 }
 
-.badge-dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: #9DA17C;
-  box-shadow: 0 0 0 0 rgba(157,161,124,0.6);
-  animation: pulse 2s infinite 1s;
+.clinic-name-main {
+  font-size: clamp(2.4rem, 6vw, 4.2rem);
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  text-transform: uppercase;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.5);
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.15);
 }
 
-@keyframes pulse {
-  0%   { box-shadow: 0 0 0 0 rgba(157,161,124,0.6); }
-  70%  { box-shadow: 0 0 0 8px rgba(157,161,124,0); }
-  100% { box-shadow: 0 0 0 0 rgba(157,161,124,0); }
+.clinic-name-sub {
+  font-size: clamp(0.7rem, 1.8vw, 0.9rem);
+  font-weight: 500;
+  color: #9DA17C;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+
+/* ── Thin divider between name and tagline ── */
+.hero-divider {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    #9DA17C,
+    transparent
+  );
+  border-radius: 2px;
+  opacity: 0;
+  animation: fadeUp 0.6s ease forwards 0.5s;
 }
 
 .hero-heading {
@@ -478,7 +498,7 @@ img {
   flex-direction: column;
   gap: 0.15em;
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(2.6rem, 5vw, 4rem);
+  font-size: clamp(1.6rem, 3.5vw, 2.8rem);
   font-weight: 800;
   line-height: 1.1;
   color: #ffffff;
@@ -506,10 +526,10 @@ img {
 }
 
 .hero-subtext {
-  font-size: 1rem;
+  font-size: 0.92rem;
   color: rgba(255, 255, 255, 0.85);
   line-height: 1.75;
-  max-width: 560px;
+  max-width: 480px;
   margin: 0;
   opacity: 0;
   animation: fadeUp 0.7s ease forwards 1s;
@@ -661,22 +681,26 @@ img {
 }
 
 @media (max-width: 768px) {
-  .hero-heading {
-    font-size: clamp(2rem, 8vw, 2.8rem);
+  .announcement-bar {
+    display: none;
   }
+
   .hero-subtext br { display: none; }
 }
 
 @media (max-width: 540px) {
-  .announcement-bar {
-    padding: 6px 0;
+  .clinic-name-main {
+    font-size: clamp(2rem, 10vw, 3rem);
+    letter-spacing: 0.02em;
   }
 
-  .announcement-bar p {
-    font-size: 10px;
-    line-height: 1.45;
-    padding: 0 12px;
-    white-space: normal;
+  .clinic-name-sub {
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+  }
+
+  .hero-divider {
+    width: 40px;
   }
 
   .hero {
@@ -685,12 +709,12 @@ img {
   }
 
   .hero-content {
-    gap: 1rem;
+    gap: 0.85rem;
     padding: 0 1.2rem;
   }
 
   .hero-heading {
-    font-size: clamp(1.9rem, 7.5vw, 2.6rem);
+    font-size: clamp(1.4rem, 6.5vw, 2rem);
   }
 
   .hero-subtext {
@@ -707,12 +731,6 @@ img {
     width: 100%;
     text-align: center;
     padding: 0.85rem 1rem;
-  }
-
-  .hero-badge {
-    font-size: 0.65rem;
-    padding: 0.4rem 0.85rem;
-    text-align: center;
   }
 
   .hero-scroll-hint {
@@ -758,7 +776,8 @@ img {
     transition: none !important;
   }
 
-  .hero .hero-badge,
+  .hero .hero-clinic-name,
+  .hero .hero-divider,
   .hero .hero-subtext,
   .hero .hero-actions,
   .hero .hero-stats,
@@ -969,7 +988,9 @@ img {
 
 .image-grid-2x2 img {
   width: 100%;
-  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center;
   border-radius: 6px;
 }
 
@@ -1079,9 +1100,11 @@ img {
 
 .gallery-teaser-item img {
   width: 100%;
-  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center;
   border-radius: 6px;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .gallery-teaser-item img:hover {
@@ -1414,10 +1437,12 @@ img {
 
 .gallery-item img {
   width: 100%;
-  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center;
   display: block;
   border-radius: 6px;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .gallery-item:hover img {
