@@ -7,13 +7,14 @@
   <meta name="description" content="Explore our clinic, technology, and the beautiful smiles we create at Braces N Faces Dental Clinic in Rajajinagar, Bengaluru.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
 <body>
   <!-- Announcement Bar -->
   <div class="announcement-bar">
-    <span>🦷 Braces · Implants · Smile Design · Invisalign</span>
+    <span><i class="ph ph-tooth"></i> Braces · Implants · Smile Design · Invisalign</span>
     <span class="ann-sep">|</span>
     <span>📞 <a href="tel:09341260159">093412 60159</a></span>
     <span class="ann-sep">|</span>
@@ -21,7 +22,7 @@
   </div>
 
   <!-- Navigation -->
-  <nav class="navbar">
+  <nav class="navbar" id="navbar">
     <div class="container">
       <a href="index.html" class="logo">
         <span class="logo-main">Braces N Faces</span>
@@ -35,7 +36,7 @@
         <a href="contact.html">Contact</a>
       </div>
       <a href="https://book.healthplix.com/dr-manjunath-hegde-orthodontics-rajajinagar-bangalore?utm_source=gmb_cta&rwg_token=AFd1xnEPT1rhLI5wkBDWvO5gjd2ggImeoKMl7Kl5-p0PUcAnwoERS7769xlYlGFQowavKEO7Gd_ffFD9qaPdabV6JdSrgLzQUQ%3D%3D" class="btn btn-primary btn-pill nav-cta" target="_blank" rel="noopener noreferrer">Book Appointment</a>
-      <div class="hamburger" aria-label="Menu">
+      <div class="hamburger" aria-label="Menu" id="hamburger">
         <span></span>
         <span></span>
         <span></span>
@@ -44,8 +45,8 @@
   </nav>
 
   <!-- Mobile Menu -->
-  <div class="mobile-menu">
-    <span class="mobile-close">&times;</span>
+  <div class="mobile-menu" id="mobileMenu">
+    <span class="mobile-close" id="mobileClose">&times;</span>
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
     <a href="gallery.html">Gallery</a>
