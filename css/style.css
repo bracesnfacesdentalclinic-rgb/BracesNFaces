@@ -1795,22 +1795,7 @@ h1, h2, h3, h4, h5, h6 {
   .cta-primary, .cta-secondary { width: 100%; text-align: center; padding: 0.9rem 1rem; }
   .hero-scroll-hint { display: none; }
   .hero-floats .hero-float { display: none; }
-  .hero-stats {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    border-radius: var(--radius-md);
-    overflow: hidden;
-    padding: 0;
-    max-width: 100%;
-  }
-  .stat-sep { display: none; }
-  .hero-stat {
-    padding: 1rem 0.5rem;
-    border-right: 1px solid rgba(255,255,255,0.08);
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-  }
-  .hero-stat:nth-of-type(2n) { border-right: none; }
-  .hero-stat:nth-of-type(n+3) { border-bottom: none; }
+
   .values-grid { grid-template-columns: 1fr 1fr; }
 }
 
