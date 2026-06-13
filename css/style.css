@@ -1514,7 +1514,7 @@ h1, h2, h3, h4, h5, h6 {
   border-color: rgba(157,161,124,0.3);
   transform: translateY(-4px);
 }
-.why-item .icon { font-size: 36px; margin-bottom: 14px; display: block; }
+.why-item .icon { font-size: 36px; margin-bottom: 14px; display: block; color: #ffffff; }
 .why-item h4 {
   font-size: 16px;
   font-family: 'Playfair Display', serif;
