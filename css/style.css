@@ -501,7 +501,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Address Small */
 .hero-address-small {
   font-size: 0.85rem;
-  color: var(--muted);
+  color: #5C7047; /* Ivory/Olive Green */
   font-weight: 500;
   margin-top: 0.2rem;
   margin-bottom: 0.2rem;
@@ -637,7 +637,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Stats Section Below Hero */
 .sage-bg {
-  background-color: var(--primary);
+  background-color: #5C7047; /* Ivory/Olive Green */
   padding: 2.5rem 0;
 }
 .stats-section-grid {
