@@ -97,7 +97,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ── Navbar ── */
 .navbar {
-  background: linear-gradient(135deg, #A3B58D 0%, #9CAF88 50%, #94A682 100%);
+  background: #FFFFFF;
   border-bottom: 1px solid rgba(201, 169, 110, 0.3);
   position: sticky;
   top: 0;
@@ -105,7 +105,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: background var(--transition), box-shadow var(--transition);
 }
 .navbar.scrolled {
-  background: rgba(157,161,124,0.97);
+  background: rgba(255, 255, 255, 0.97);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   box-shadow: 0 4px 24px rgba(0,0,0,0.15);
@@ -231,16 +231,16 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-cta {
   display: none;
-  background: var(--white) !important;
-  color: var(--dark) !important;
+  background: var(--primary) !important;
+  color: var(--white) !important;
   border-radius: var(--radius-pill) !important;
   padding: 10px 22px !important;
   font-size: 13px !important;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.15) !important;
+  box-shadow: 0 4px 16px rgba(156, 175, 136, 0.3) !important;
 }
 .nav-cta:hover {
-  background: var(--cream) !important;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.2) !important;
+  background: var(--accent) !important;
+  box-shadow: 0 8px 24px rgba(201, 169, 110, 0.4) !important;
   transform: translateY(-2px);
 }
 
