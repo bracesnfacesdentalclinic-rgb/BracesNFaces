@@ -642,6 +642,28 @@ h1, h2, h3, h4, h5, h6 {
   animation: none;
   opacity: 1;
 }
+@media (max-width: 767px) {
+  .hero-stats, .stats-section-grid {
+    flex-wrap: nowrap;
+    gap: 0.2rem;
+    justify-content: space-evenly;
+  }
+  .hero-stat {
+    padding: 0 0.2rem;
+  }
+  .stat-val {
+    font-size: 1.1rem;
+  }
+  .stat-desc {
+    font-size: 0.45rem;
+    letter-spacing: 0;
+    white-space: nowrap;
+  }
+  .stat-sep {
+    height: 20px;
+    margin: 0;
+  }
+}
 @media (min-width: 1024px) {
   .stats-section-grid { justify-content: center; }
 }
