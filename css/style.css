@@ -471,6 +471,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 @keyframes rotateSpin { to { transform: rotate(360deg); } }
 
+/* Tagline Capsule */
+.hero-capsule {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  background: rgba(156, 175, 136, 0.15);
+  color: var(--primary-dark);
+  border-radius: var(--radius-pill);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+
 /* Tagline */
 .hero-heading {
   display: block;
@@ -482,6 +496,19 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
   text-align: inherit;
   letter-spacing: 0.02em;
+}
+
+/* Address Small */
+.hero-address-small {
+  font-size: 0.85rem;
+  color: var(--muted);
+  font-weight: 500;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+}
+.hero-address-small i {
+  color: var(--accent);
+  margin-right: 0.3rem;
 }
 .reveal-line {
   display: block;
@@ -539,6 +566,26 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 12px 40px rgba(201,169,110,0.5);
 }
 
+.cta-gold {
+  background: var(--accent);
+  color: var(--white);
+  padding: 0.95rem 2.4rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  transition: all var(--transition);
+  box-shadow: 0 6px 28px rgba(201,169,110,0.3);
+  position: relative;
+  display: inline-block;
+}
+.cta-gold:hover {
+  background: #B8860B;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 40px rgba(184, 134, 11, 0.4);
+}
+
 /* Stats bar */
 .hero-stats {
   display: flex;
@@ -587,6 +634,24 @@ h1, h2, h3, h4, h5, h6 {
   background: rgba(42,47,40,0.12);
   flex-shrink: 0;
 }
+
+/* Stats Section Below Hero */
+.sage-bg {
+  background-color: var(--primary);
+  padding: 2.5rem 0;
+}
+.stats-section-grid {
+  justify-content: center;
+  margin-top: 0;
+  animation: none;
+  opacity: 1;
+}
+@media (min-width: 1024px) {
+  .stats-section-grid { justify-content: center; }
+}
+.text-white { color: #ffffff !important; }
+.text-white-muted { color: rgba(255,255,255,0.85) !important; }
+.light-sep { background: rgba(255,255,255,0.2) !important; }
 
 /* RIGHT: Image Column */
 .hero-image-col {
