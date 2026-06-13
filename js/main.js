@@ -144,21 +144,21 @@ document.addEventListener('DOMContentLoaded', function() {
       const date = document.getElementById('date').value;
       const message = document.getElementById('message').value;
       
-      const subject = encodeURIComponent(`New Enquiry from ${name} - Braces N Faces Website`);
-      const body = encodeURIComponent(
-        `Name: ${name}\n` +
-        `Phone: ${phone}\n` +
-        `Email: ${email}\n` +
-        `Service Interested In: ${service}\n` +
-        `Preferred Date: ${date}\n` +
-        `Message:\n${message}`
+      const whatsappMessage = encodeURIComponent(
+        `Hello, I would like to book an appointment / make an enquiry.\n\n` +
+        `*Name:* ${name}\n` +
+        `*Phone:* ${phone}\n` +
+        (email ? `*Email:* ${email}\n` : '') +
+        `*Service Interested In:* ${service}\n` +
+        (date ? `*Preferred Date:* ${date}\n` : '') +
+        (message ? `*Message:*\n${message}` : '')
       );
       
-      window.location.href = `mailto:bracesnfacesdentalclinic@gmail.com?subject=${subject}&body=${body}`;
+      window.open(`https://wa.me/919341260159?text=${whatsappMessage}`, '_blank');
       
       const submitBtn = contactForm.querySelector('button[type="submit"]');
       const originalText = submitBtn.innerText;
-      submitBtn.innerText = "Opening Email Client...";
+      submitBtn.innerText = "Redirecting to WhatsApp...";
       
       setTimeout(() => {
         submitBtn.innerText = originalText;
