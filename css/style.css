@@ -339,7 +339,6 @@ h1, h2, h3, h4, h5, h6 {
   transform: scale(1.05);
   animation: kenBurns 18s ease-out forwards;
   will-change: transform;
-  filter: blur(5px) brightness(0.7);
 }
 @keyframes kenBurns {
   from { transform: scale(1.08) translateX(1%); }
@@ -349,12 +348,23 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    168deg,
-    rgba(10, 12, 8, 0.78) 0%,
-    rgba(10, 12, 8, 0.55) 45%,
-    rgba(10, 12, 8, 0.72) 100%
+    160deg,
+    rgba(42, 47, 40, 0.88) 0%,
+    rgba(42, 47, 40, 0.72) 45%,
+    rgba(42, 47, 40, 0.85) 100%
   );
   z-index: 1;
+}
+.hero-text-shade {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 70% 60% at 50% 55%,
+    rgba(20, 24, 18, 0.55) 0%,
+    transparent 70%
+  );
+  z-index: 1;
+  pointer-events: none;
 }
 /* Subtle color grade */
 .hero-overlay::after {
@@ -1338,6 +1348,59 @@ h1, h2, h3, h4, h5, h6 {
 }
 .service-full-card:hover .service-img-wrap img {
   transform: scale(1.08);
+}
+
+/* Services Category Banner */
+.category-banner-wrap {
+  width: 100%;
+  aspect-ratio: 16 / 6;
+  background-color: var(--primary-light);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  margin-bottom: 32px;
+  box-shadow: var(--shadow-sm);
+}
+@media (max-width: 768px) {
+  .category-banner-wrap {
+    aspect-ratio: 16 / 8;
+  }
+}
+.category-banner-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Services Text Grid */
+.services-text-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+@media (min-width: 600px) { .services-text-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .services-text-grid { grid-template-columns: repeat(3, 1fr); } }
+
+.service-text-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), box-shadow var(--transition);
+  display: flex;
+  align-items: center;
+}
+.service-text-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary-light);
+}
+.service-text-card h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+  color: var(--primary-dark);
 }
 .service-full-card .service-img-wrap::after {
   content: '';
