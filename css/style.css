@@ -594,7 +594,8 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   overflow: hidden;
   order: -1;
-  height: 38vh;
+  height: 50vh;
+  min-height: 400px;
 }
 @media (min-width: 1024px) {
   .hero-image-col {
@@ -610,8 +611,8 @@ h1, h2, h3, h4, h5, h6 {
   height: 100%;
   object-fit: cover;
   object-position: center top;
-  mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
-  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%);
   /* Fade and slight scale in */
   position: relative;
   z-index: 1;
