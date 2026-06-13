@@ -649,6 +649,12 @@ h1, h2, h3, h4, h5, h6 {
 .text-white-muted { color: rgba(255,255,255,0.85) !important; }
 .light-sep { background: rgba(255,255,255,0.2) !important; }
 
+/* Dark modifiers for stats on light background */
+.text-dark { color: #2A2F28 !important; }
+.text-dark-muted { color: rgba(42,47,40,0.8) !important; font-weight: 700; }
+.dark-sep { background: rgba(42,47,40,0.3) !important; }
+.stat-plus { color: #2A2F28; font-weight: 900; opacity: 0.8; }
+
 /* RIGHT: Image Column */
 .hero-image-col {
   width: 100%;
