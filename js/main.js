@@ -129,7 +129,17 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // ── Contact Form ──
+  // ── Contact Form & Date Picker ──
+  const dateInput = document.getElementById('date');
+  if (dateInput && typeof flatpickr !== 'undefined') {
+    dateInput.type = 'text';
+    flatpickr(dateInput, {
+      dateFormat: "d/m/Y",
+      minDate: "today",
+      disableMobile: true
+    });
+  }
+
   const contactForm = document.getElementById('contactForm');
   
   if (contactForm) {
