@@ -71,7 +71,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ── Announcement Bar ── */
 .announcement-bar {
-  background: linear-gradient(90deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-dark) 100%);
+  background: linear-gradient(90deg, #7E9168 0%, #899C75 50%, #7E9168 100%);
   padding: 10px 0;
   text-align: center;
   position: relative;
@@ -97,8 +97,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ── Navbar ── */
 .navbar {
-  background: var(--primary);
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  background: linear-gradient(135deg, #A3B58D 0%, #9CAF88 50%, #94A682 100%);
+  border-bottom: 1px solid rgba(201, 169, 110, 0.3);
   position: sticky;
   top: 0;
   z-index: 999;
