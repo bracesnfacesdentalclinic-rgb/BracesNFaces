@@ -554,6 +554,7 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 0;
   animation: fadeUp 0.7s ease forwards 1.45s;
   width: 100%;
+  flex-wrap: wrap;
 }
 @media (min-width: 1024px) {
   .hero-stats { justify-content: flex-start; }
@@ -1730,18 +1731,8 @@ h1, h2, h3, h4, h5, h6 {
 /* ── Mobile Responsive Fine-tuning ── */
 @media (max-width: 600px) {
   .clinic-name-main {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(2.2rem, 11vw, 3rem);
-  font-weight: 900;
-  color: #2A2F28;
-  letter-spacing: -0.02em;
-  line-height: 0.95;
-}
-@media (min-width: 1024px) {
-  .clinic-name-main {
-    font-size: clamp(3rem, 7vw, 5.5rem);
+    font-size: clamp(2.2rem, 11vw, 3rem);
   }
-}
   .hero-heading { font-size: clamp(1.4rem, 6vw, 2rem); }
   .hero-actions { flex-direction: column; width: 100%; max-width: 280px; }
   .cta-primary, .cta-secondary { width: 100%; text-align: center; padding: 0.9rem 1rem; }
