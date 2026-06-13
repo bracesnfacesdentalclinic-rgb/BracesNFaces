@@ -129,9 +129,43 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-
-
-  // ── Smooth Hover on Service Cards ──
+  // ── Contact Form ──
+  const contactForm = document.getElementById('contactForm');
+  
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const name = document.getElementById('name').value;
+      const phone = document.getElementById('phone').value;
+      const email = document.getElementById('email').value;
+      const serviceElement = document.getElementById('service');
+      const service = serviceElement.options[serviceElement.selectedIndex].text;
+      const date = document.getElementById('date').value;
+      const message = document.getElementById('message').value;
+      
+      const subject = encodeURIComponent(`New Enquiry from ${name} - Braces N Faces Website`);
+      const body = encodeURIComponent(
+        `Name: ${name}\n` +
+        `Phone: ${phone}\n` +
+        `Email: ${email}\n` +
+        `Service Interested In: ${service}\n` +
+        `Preferred Date: ${date}\n` +
+        `Message:\n${message}`
+      );
+      
+      window.location.href = `mailto:bracesnfacesdentalclinic@gmail.com?subject=${subject}&body=${body}`;
+      
+      const submitBtn = contactForm.querySelector('button[type="submit"]');
+      const originalText = submitBtn.innerText;
+      submitBtn.innerText = "Opening Email Client...";
+      
+      setTimeout(() => {
+        submitBtn.innerText = originalText;
+        contactForm.reset();
+      }, 3000);
+    });
+  }
   const serviceCards = document.querySelectorAll('.service-card, .service-full-card');
   serviceCards.forEach(card => {
     card.addEventListener('mouseenter', () => {
