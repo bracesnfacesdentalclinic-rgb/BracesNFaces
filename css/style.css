@@ -473,9 +473,6 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Tagline */
 .hero-heading {
-  display: flex;
-  flex-direction: column;
-  gap: 0.1em;
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(2.5rem, 6vw, 4.2rem);
   font-weight: 900;
@@ -1704,7 +1701,6 @@ h1, h2, h3, h4, h5, h6 {
   .clinic-name-main {
     font-size: clamp(2.2rem, 11vw, 3rem);
   }
-  .hero-heading { font-size: clamp(1.4rem, 6vw, 2rem); }
   .hero-actions { flex-direction: column; width: 100%; max-width: 280px; }
   .cta-primary, .cta-secondary { width: 100%; text-align: center; padding: 0.9rem 1rem; }
   .hero-scroll-hint { display: none; }
