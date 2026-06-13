@@ -136,15 +136,39 @@ document.addEventListener('DOMContentLoaded', function() {
   if (contactForm) {
     contactForm.addEventListener('submit', e => {
       e.preventDefault();
-      contactForm.style.display = 'none';
-      if (formSuccess) {
-        formSuccess.style.display = 'block';
-        setTimeout(() => {
-          formSuccess.style.display = 'none';
-          contactForm.style.display = 'block';
-          contactForm.reset();
-        }, 6000);
-      }
+      
+      const submitBtn = contactForm.querySelector('button[type="submit"]');
+      const originalText = submitBtn.innerText;
+      submitBtn.innerText = "Sending...";
+      submitBtn.disabled = true;
+
+      fetch("https://formsubmit.co/ajax/bracesnfacesdentalclinic@gmail.com", {
+        method: "POST",
+        headers: { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify(Object.fromEntries(new FormData(contactForm)))
+      })
+      .then(response => response.json())
+      .then(data => {
+          submitBtn.innerText = originalText;
+          submitBtn.disabled = false;
+          contactForm.style.display = 'none';
+          if (formSuccess) {
+            formSuccess.style.display = 'block';
+            setTimeout(() => {
+              formSuccess.style.display = 'none';
+              contactForm.style.display = 'block';
+              contactForm.reset();
+            }, 6000);
+          }
+      })
+      .catch(error => {
+          submitBtn.innerText = originalText;
+          submitBtn.disabled = false;
+          alert("Sorry, there was an error sending your enquiry. Please try again.");
+      });
     });
   }
 
