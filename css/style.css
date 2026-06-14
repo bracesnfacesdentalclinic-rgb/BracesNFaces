@@ -648,13 +648,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 .stat-val {
   font-size: 2.0rem;
-  font-weight: 800;
+  font-weight: 700;
   color: #2A2F28;
   line-height: 1;
   display: flex;
   align-items: baseline;
   gap: 0.1rem;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Inter', sans-serif;
 }
 .stat-desc {
   font-size: 0.75rem;
