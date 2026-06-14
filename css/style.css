@@ -485,7 +485,7 @@ h1, h2, h3, h4, h5, h6 {
   background: rgba(156, 175, 136, 0.15);
   color: var(--primary-dark);
   border-radius: var(--radius-pill);
-  font-size: clamp(0.65rem, 3.5vw, 0.9rem);
+  font-size: clamp(0.7rem, 4vw, 0.95rem);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
