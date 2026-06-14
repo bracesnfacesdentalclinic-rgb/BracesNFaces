@@ -647,7 +647,7 @@ h1, h2, h3, h4, h5, h6 {
   .hero-stat { align-items: flex-start; }
 }
 .stat-val {
-  font-size: 1.6rem;
+  font-size: 2.0rem;
   font-weight: 800;
   color: #2A2F28;
   line-height: 1;
@@ -657,7 +657,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Playfair Display', serif;
 }
 .stat-desc {
-  font-size: 0.6rem;
+  font-size: 0.75rem;
   color: #8A8F80;
   text-transform: uppercase;
   letter-spacing: 0.12em;
@@ -688,11 +688,11 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0 0.2rem;
   }
   .stat-val {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
   }
   .stat-desc {
-    font-size: 0.45rem;
-    letter-spacing: 0;
+    font-size: 0.55rem;
+    letter-spacing: 0.05em;
     white-space: nowrap;
   }
   .stat-sep {
