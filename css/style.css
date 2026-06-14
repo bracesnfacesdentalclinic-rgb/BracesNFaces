@@ -1858,16 +1858,10 @@ h1, h2, h3, h4, h5, h6 {
   width: auto;
   vertical-align: middle;
 }
-.pillar-item .custom-img-icon,
-.why-item .custom-img-icon {
-  filter: invert(1);
-  mix-blend-mode: screen;
-}
 .value-item .custom-img-icon {
-  mix-blend-mode: multiply;
+  filter: invert(1);
   transition: all var(--transition);
 }
 .value-item:hover .custom-img-icon {
-  filter: invert(1);
-  mix-blend-mode: screen;
+  filter: none;
 }
