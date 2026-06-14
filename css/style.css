@@ -368,6 +368,13 @@ h1, h2, h3, h4, h5, h6 {
   animation: slideInLeft 1s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.2s;
 }
 
+@media (max-width: 1023px) {
+  .hero-content {
+    margin-top: -65px;
+    z-index: 20;
+  }
+}
+
 @media (min-width: 1024px) {
   .hero-content {
     align-items: flex-start;
@@ -485,6 +492,15 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.5rem;
 }
 
+@media (max-width: 767px) {
+  .hero-capsule {
+    font-size: 0.55rem;
+    padding: 0.3rem 0.5rem;
+    white-space: nowrap;
+    letter-spacing: 0.05em;
+  }
+}
+
 /* Tagline */
 .hero-heading {
   display: block;
@@ -543,7 +559,27 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 0;
   animation: fadeUp 0.7s ease forwards 1.2s;
   margin-top: 0.5rem;
+  flex-direction: column;
+  align-items: center;
 }
+
+@media (min-width: 1024px) {
+  .hero-actions {
+    align-items: flex-start;
+  }
+}
+
+.hero-phone-below {
+  margin-top: 0.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2A2F28;
+}
+.hero-phone-below a {
+  color: inherit;
+  text-decoration: none;
+}
+
 
 .cta-primary {
   background: var(--primary);
